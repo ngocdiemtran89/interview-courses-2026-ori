@@ -455,6 +455,102 @@
       box-shadow: 0 8px 22px rgba(11,94,215,.12);
     }
 
+    .express-package {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.45fr .55fr;
+      gap: 26px;
+      align-items: center;
+      margin-bottom: 26px;
+      padding: 28px 30px;
+      border-radius: 26px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 90% 15%, rgba(255,255,255,.20), transparent 28%),
+        linear-gradient(135deg, var(--blue-950), var(--blue-700) 64%, var(--green-600));
+      box-shadow: 0 24px 64px rgba(6,47,104,.22);
+      overflow: hidden;
+    }
+    .express-package::after {
+      content: "02 BUỔI";
+      position: absolute;
+      right: -18px;
+      bottom: -32px;
+      font-size: 92px;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: -.06em;
+      color: rgba(255,255,255,.08);
+      pointer-events: none;
+    }
+    .express-badge {
+      display: inline-flex;
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: var(--blue-950);
+      background: #fff;
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: .05em;
+    }
+    .express-package h3 {
+      margin: 13px 0 8px;
+      font-size: clamp(26px, 4vw, 38px);
+      line-height: 1.12;
+      letter-spacing: -.03em;
+    }
+    .express-package p {
+      margin: 0;
+      max-width: 760px;
+      color: rgba(255,255,255,.86);
+    }
+    .express-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 9px 18px;
+      margin-top: 18px;
+    }
+    .express-point {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 13px;
+      color: rgba(255,255,255,.93);
+    }
+    .express-side {
+      position: relative;
+      z-index: 1;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 20px;
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+    .express-price {
+      font-size: clamp(34px, 5vw, 48px);
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: -.04em;
+    }
+    .express-note {
+      margin: 8px 0 17px;
+      color: rgba(255,255,255,.82);
+      font-size: 13px;
+    }
+    .express-side .btn {
+      width: 100%;
+      background: #fff;
+      color: var(--blue-900);
+      box-shadow: 0 12px 30px rgba(0,0,0,.14);
+    }
+    .express-warning {
+      margin-top: 12px;
+      font-size: 11px;
+      color: rgba(255,255,255,.72);
+    }
+
     .packages {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -532,7 +628,7 @@
     }
     .comparison {
       width: 100%;
-      min-width: 920px;
+      min-width: 1120px;
       border-collapse: collapse;
     }
     .comparison th,
@@ -546,7 +642,7 @@
     .comparison th:first-child,
     .comparison td:first-child { text-align: left; font-weight: 800; }
     .comparison th { background: var(--blue-50); color: var(--blue-900); }
-    .comparison th:nth-child(3) { background: var(--green-100); color: var(--green-700); }
+    .comparison th:nth-child(4) { background: var(--green-100); color: var(--green-700); }
     .comparison tr:last-child td { border-bottom: 0; }
     .comparison th:last-child,
     .comparison td:last-child { border-right: 0; }
@@ -671,6 +767,8 @@
       .menu { display: none; }
       .hero-grid { grid-template-columns: 1fr; }
       .packages { grid-template-columns: repeat(2, 1fr); }
+      .express-package { grid-template-columns: 1fr; }
+      .express-side { max-width: 360px; text-align: left; }
       .features-grid { grid-template-columns: repeat(2, 1fr); }
       .process { grid-template-columns: repeat(2, 1fr); gap: 30px 18px; }
       .process::before { display: none; }
@@ -692,6 +790,9 @@
       .mini-grid { grid-template-columns: 1fr; }
       .trust-grid { grid-template-columns: repeat(2, 1fr); }
       .features-grid,
+      .express-package { padding: 24px 20px; }
+      .express-points { grid-template-columns: 1fr; }
+      .express-side { max-width: none; text-align: center; }
       .packages,
       .packages.ground,
       .result-grid,
@@ -865,7 +966,7 @@
         <div class="section-heading">
           <span class="eyebrow">Gói coaching</span>
           <h2>Chọn đúng lộ trình, tiết kiệm thời gian ôn luyện</h2>
-          <p>Gói Silver được đề xuất cho phần lớn ứng viên lần đầu thi vì đã bao gồm giao tiếp phản xạ và bộ câu hỏi thường gặp.</p>
+          <p>Đã thành thạo và chỉ cần sửa lỗi trước ngày thi? Chọn gói Cấp tốc 2 buổi. Cần lộ trình đầy đủ từ CV đến phản xạ? Silver là lựa chọn cân bằng nhất.</p>
         </div>
 
         <div style="text-align:center">
@@ -876,6 +977,28 @@
         </div>
 
         <div id="cabin" class="package-panel">
+          <article class="express-package">
+            <div>
+              <span class="express-badge">CẤP TỐC • SỬA LỖI TRƯỚC NGÀY THI</span>
+              <h3>Interview Fix – Phỏng vấn & sửa lỗi trong 2 buổi</h3>
+              <p>Dành riêng cho ứng viên <strong>đã thành thạo, đã có CV và script</strong>, chỉ cần Coach kiểm tra, mock nhanh và sửa những lỗi đang làm bạn mất điểm.</p>
+              <div class="express-points">
+                <div class="express-point"><span>✓</span><span>02 buổi Coaching 1:1 tập trung sửa lỗi</span></div>
+                <div class="express-point"><span>✓</span><span>Mock Interview theo hãng hoặc đợt thi sắp tới</span></div>
+                <div class="express-point"><span>✓</span><span>Sửa câu trả lời lan man, học thuộc hoặc thiếu thuyết phục</span></div>
+                <div class="express-point"><span>✓</span><span>Sửa phát âm, phản xạ, ánh mắt và phong thái</span></div>
+                <div class="express-point"><span>✓</span><span>Góp ý trực tiếp trên CV và script có sẵn</span></div>
+                <div class="express-point"><span>✓</span><span>Tổng hợp lỗi trọng tâm cần sửa sau buổi học</span></div>
+              </div>
+            </div>
+            <div class="express-side">
+              <div class="express-price">999.000đ</div>
+              <div class="express-note">02 buổi Coaching 1:1</div>
+              <a class="btn" href="https://zalo.me/0906303373" target="_blank" rel="noopener">Đăng ký sửa lỗi cấp tốc</a>
+              <div class="express-warning">Không phù hợp với người chưa có nền tảng hoặc cần xây CV, script từ đầu.</div>
+            </div>
+          </article>
+
           <div class="packages">
             <article class="package">
               <span class="package-kicker">BASIC</span>
@@ -1000,7 +1123,7 @@
         <div class="section-heading">
           <span class="eyebrow">So sánh trực quan</span>
           <h2>Quyền lợi tăng rõ theo từng cấp độ</h2>
-          <p>Silver là điểm cân bằng tốt giữa chi phí, số buổi, phản xạ tiếng Anh và mức độ cá nhân hóa.</p>
+          <p>Gói Cấp tốc dành cho người đã sẵn sàng và chỉ cần sửa lỗi; Silver là điểm cân bằng tốt cho ứng viên cần một lộ trình đầy đủ.</p>
         </div>
 
         <div class="comparison-wrap">
@@ -1008,6 +1131,7 @@
             <thead>
               <tr>
                 <th>Quyền lợi</th>
+                <th>Cấp tốc</th>
                 <th>Basic</th>
                 <th>Silver</th>
                 <th>Premium</th>
@@ -1015,16 +1139,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>Học phí</td><td>3 triệu</td><td><strong>5 triệu</strong></td><td>8 triệu</td><td>10 triệu</td></tr>
-              <tr><td>Coaching 1:1</td><td>06 buổi</td><td><strong>12 buổi</strong></td><td>22 buổi</td><td>Theo lộ trình</td></tr>
-              <tr><td>Hãng mục tiêu</td><td>01 hãng nội địa</td><td><strong>2–3 hãng nội địa</strong></td><td>Nội địa & quốc tế</td><td>Nhiều hãng</td></tr>
-              <tr><td>Thiết kế CV</td><td>01 bản</td><td><strong>Tối đa 02 bản</strong></td><td>Tối đa 02 bản chuyên biệt</td><td>Tối đa 03 bản</td></tr>
-              <tr><td>Soạn & sửa script</td><td class="yes">Có</td><td class="yes">Chi tiết</td><td class="yes">Chuyên sâu</td><td class="yes">Theo lộ trình</td></tr>
-              <tr><td>Ghi chú sau mỗi buổi</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-              <tr><td>Bộ câu hỏi thường gặp</td><td>Cơ bản</td><td><strong>Đầy đủ</strong></td><td>Nội địa & quốc tế</td><td>Cập nhật theo hãng</td></tr>
-              <tr><td>Giao tiếp phản xạ</td><td class="no">—</td><td><strong>01 tháng</strong></td><td>02 tháng</td><td>02 tháng</td></tr>
-              <tr><td>English / Math Test</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-              <tr><td>Mock Interview</td><td class="yes">✓</td><td>Theo hãng</td><td>Full format</td><td>Nhiều giai đoạn</td></tr>
+              <tr><td>Học phí</td><td><strong>999.000đ</strong></td><td>3 triệu</td><td><strong>5 triệu</strong></td><td>8 triệu</td><td>10 triệu</td></tr>
+              <tr><td>Coaching 1:1</td><td><strong>02 buổi</strong></td><td>06 buổi</td><td><strong>12 buổi</strong></td><td>22 buổi</td><td>Theo lộ trình</td></tr>
+              <tr><td>Mục tiêu</td><td>Sửa lỗi cho đợt thi gần nhất</td><td>01 hãng nội địa</td><td><strong>2–3 hãng nội địa</strong></td><td>Nội địa & quốc tế</td><td>Nhiều hãng</td></tr>
+              <tr><td>Thiết kế CV</td><td>Rà nhanh CV có sẵn</td><td>01 bản</td><td><strong>Tối đa 02 bản</strong></td><td>Tối đa 02 bản chuyên biệt</td><td>Tối đa 03 bản</td></tr>
+              <tr><td>Soạn & sửa script</td><td>Góp ý script có sẵn</td><td class="yes">Có</td><td class="yes">Chi tiết</td><td class="yes">Chuyên sâu</td><td class="yes">Theo lộ trình</td></tr>
+              <tr><td>Ghi chú sau buổi học</td><td>Tổng hợp lỗi trọng tâm</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Bộ câu hỏi thường gặp</td><td>Theo nội dung đã chuẩn bị</td><td>Cơ bản</td><td><strong>Đầy đủ</strong></td><td>Nội địa & quốc tế</td><td>Cập nhật theo hãng</td></tr>
+              <tr><td>Giao tiếp phản xạ</td><td class="no">—</td><td class="no">—</td><td><strong>01 tháng</strong></td><td>02 tháng</td><td>02 tháng</td></tr>
+              <tr><td>English / Math Test</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Mock Interview</td><td><strong>Mock & sửa lỗi</strong></td><td class="yes">✓</td><td>Theo hãng</td><td>Full format</td><td>Nhiều giai đoạn</td></tr>
             </tbody>
           </table>
         </div>
@@ -1045,7 +1169,8 @@
         </div>
         <div class="result-card">
           <h3>Gói nào phù hợp nhất?</h3>
-          <p><strong>Basic:</strong> sắp thi, đã có nền tảng, tập trung một hãng.</p>
+          <p><strong>Cấp tốc 2 buổi:</strong> đã thành thạo, đã có CV và script, chỉ cần mock và sửa lỗi trước ngày thi.</p>
+          <p style="margin-top:12px"><strong>Basic:</strong> sắp thi, cần xây lại nội dung trọng tâm cho một hãng.</p>
           <p style="margin-top:12px"><strong>Silver:</strong> cần lộ trình đầy đủ, phản xạ tiếng Anh và bộ câu hỏi thường gặp.</p>
           <p style="margin-top:12px"><strong>Premium:</strong> muốn thi nội địa lẫn quốc tế, cần English/Math Test.</p>
           <p style="margin-top:12px"><strong>Elite:</strong> theo đuổi nghiêm túc và cần đồng hành nhiều đợt tuyển dụng.</p>
@@ -1063,12 +1188,16 @@
 
         <div class="faq">
           <details open>
+            <summary>Gói Cấp tốc 2 buổi phù hợp với ai?</summary>
+            <p>Gói này dành cho ứng viên đã có nền tảng tốt, đã chuẩn bị CV và script, có thể trả lời phỏng vấn tương đối thành thạo nhưng muốn Coach mock nhanh, phát hiện lỗi và chỉnh lại cách trả lời, phát âm, phản xạ hoặc phong thái trước ngày thi. Gói không bao gồm xây CV và script từ đầu.</p>
+          </details>
+          <details>
             <summary>Tiếng Anh chưa tốt có học được không?</summary>
             <p>Có. Coach sẽ đánh giá trình độ đầu vào và điều chỉnh tốc độ học. Từ gói Silver, học viên được bổ sung giao tiếp phản xạ để cải thiện khả năng nghe – nói và xử lý câu hỏi bằng tiếng Anh.</p>
           </details>
           <details>
             <summary>CV có được thiết kế lại hoàn toàn không?</summary>
-            <p>Có. ORI hỗ trợ sắp xếp kinh nghiệm, viết mục tiêu nghề nghiệp, làm nổi bật kỹ năng phù hợp và trình trình bày CV theo hướng chuyên nghiệp, dễ đọc.</p>
+            <p>Có. ORI hỗ trợ sắp xếp kinh nghiệm, viết mục tiêu nghề nghiệp, làm nổi bật kỹ năng phù hợp và trình bày CV theo hướng chuyên nghiệp, dễ đọc.</p>
           </details>
           <details>
             <summary>Script có phải câu trả lời mẫu giống nhau không?</summary>
