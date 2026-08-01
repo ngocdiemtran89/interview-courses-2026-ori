@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Khóa Coaching phỏng vấn hàng không 1:1 tại ORI TOEIC: luyện tiếp viên hàng không, nhân viên mặt đất, CV, script, giao tiếp phản xạ và mock interview." />
+  <meta name="theme-color" content="#0b5ed7" />
+  <title>ORI TOEIC | Coaching Phỏng Vấn Hàng Không 1:1</title>
+
+  <style>
+    :root {
+      --blue-950: #062f68;
+      --blue-900: #0a3d82;
+      --blue-800: #0b4fa8;
+      --blue-700: #0b5ed7;
+      --blue-600: #2374e1;
+      --blue-100: #eaf3ff;
+      --blue-50: #f5f9ff;
+      --green-700: #0f8b63;
+      --green-600: #12a673;
+      --green-500: #18b981;
+      --green-100: #def8ed;
+      --green-50: #f1fcf7;
+      --ink: #10213a;
+      --muted: #5e7088;
+      --line: #dce7f5;
+      --white: #ffffff;
+      --shadow-sm: 0 10px 30px rgba(11, 94, 215, 0.08);
+      --shadow-md: 0 22px 60px rgba(5, 58, 126, 0.14);
+      --radius: 22px;
+      --radius-sm: 15px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin-inline: auto;
+    }
+
+    .section { padding: 84px 0; }
+    .section-soft { background: linear-gradient(180deg, var(--blue-50), #fff); }
+    .section-green { background: linear-gradient(180deg, var(--green-50), #fff); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: var(--blue-800);
+      background: var(--blue-100);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 14px 0 12px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 13px 22px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .25s ease;
+      text-align: center;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--blue-700), var(--blue-900));
+      box-shadow: 0 12px 28px rgba(11, 94, 215, .24);
+    }
+    .btn-green {
+      color: #fff;
+      background: linear-gradient(135deg, var(--green-500), var(--green-700));
+      box-shadow: 0 12px 28px rgba(18, 166, 115, .22);
+    }
+    .btn-outline {
+      color: var(--blue-800);
+      background: #fff;
+      border-color: #cfe0f5;
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, var(--blue-950), var(--blue-700), var(--green-700));
+      color: #fff;
+      font-size: 13px;
+    }
+    .topbar-inner {
+      min-height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(220,231,245,.85);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--blue-700), var(--green-500));
+      box-shadow: var(--shadow-sm);
+    }
+    .brand-text strong { display: block; line-height: 1.1; }
+    .brand-text span { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #314867;
+    }
+    .menu a:hover { color: var(--blue-700); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 74px 0 60px;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(24,185,129,.15), transparent 26%),
+        radial-gradient(circle at 85% 18%, rgba(11,94,215,.20), transparent 32%),
+        linear-gradient(180deg, #f7fbff 0%, #ffffff 76%);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(2px);
+      opacity: .55;
+      pointer-events: none;
+    }
+    .hero::before {
+      width: 360px;
+      height: 360px;
+      right: -160px;
+      top: 80px;
+      background: rgba(11, 94, 215, .12);
+    }
+    .hero::after {
+      width: 280px;
+      height: 280px;
+      left: -140px;
+      bottom: 0;
+      background: rgba(24, 185, 129, .12);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.06fr .94fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      margin: 18px 0 20px;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+    .hero-copy h1 span {
+      color: var(--blue-700);
+      background: linear-gradient(90deg, var(--blue-700), var(--green-600));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy > p {
+      margin: 0;
+      font-size: 18px;
+      color: #4d627d;
+      max-width: 680px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 12px;
+      margin: 28px 0 30px;
+    }
+    .hero-point {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 14px 15px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .icon-check {
+      flex: 0 0 22px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green-500);
+      font-size: 13px;
+      margin-top: 1px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 26px;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #ffffff, #f3f9ff);
+      border: 1px solid rgba(202,221,244,.92);
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-card::before {
+      content: "LỘ TRÌNH CÁ NHÂN HÓA";
+      position: absolute;
+      right: 22px;
+      top: -13px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--green-600);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .06em;
+    }
+
+    .mock-screen {
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--blue-950), var(--blue-700));
+      color: #fff;
+      padding: 26px;
+      min-height: 230px;
+      position: relative;
+    }
+    .mock-screen::after {
+      content: "";
+      position: absolute;
+      inset: auto -50px -70px auto;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: rgba(24,185,129,.28);
+    }
+    .mock-screen small { opacity: .8; font-weight: 700; }
+    .mock-screen h3 {
+      margin: 14px 0 10px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .mock-screen p { margin: 0; opacity: .9; max-width: 440px; }
+
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .mini-card {
+      padding: 15px;
+      border-radius: 15px;
+      background: #fff;
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+    .mini-card strong { display: block; font-size: 21px; color: var(--blue-700); }
+    .mini-card span { font-size: 12px; color: var(--muted); }
+
+    .trust-strip { padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .trust-item { text-align: center; }
+    .trust-item strong { display: block; font-size: 24px; color: var(--blue-800); }
+    .trust-item span { color: var(--muted); font-size: 13px; }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .feature-card {
+      position: relative;
+      padding: 26px;
+      border-radius: var(--radius);
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      transition: .25s ease;
+      overflow: hidden;
+    }
+    .feature-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .feature-card::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      right: -35px;
+      top: -35px;
+      background: rgba(11,94,215,.08);
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--blue-100), var(--green-100));
+      color: var(--blue-800);
+      font-size: 22px;
+      font-weight: 900;
+    }
+    .feature-card h3 { margin: 18px 0 9px; font-size: 20px; }
+    .feature-card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .process {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .process::before {
+      content: "";
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      top: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue-600), var(--green-500));
+      z-index: 0;
+    }
+    .process-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 8px;
+    }
+    .step-no {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 16px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--blue-700), var(--green-500));
+      box-shadow: 0 10px 26px rgba(11,94,215,.24);
+      font-weight: 900;
+    }
+    .process-step h3 { margin: 0 0 8px; font-size: 18px; }
+    .process-step p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .switcher {
+      display: inline-flex;
+      background: #eaf2fc;
+      padding: 6px;
+      border-radius: 16px;
+      gap: 6px;
+      margin: 0 auto 34px;
+    }
+    .switcher button {
+      border: 0;
+      background: transparent;
+      color: #4b6380;
+      padding: 11px 17px;
+      border-radius: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .switcher button.active {
+      background: #fff;
+      color: var(--blue-800);
+      box-shadow: 0 8px 22px rgba(11,94,215,.12);
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+    .packages.ground { grid-template-columns: repeat(2, minmax(0, 420px)); justify-content: center; }
+
+    .package {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+      transition: .25s ease;
+    }
+    .package:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .package.featured {
+      border: 2px solid var(--green-500);
+      background: linear-gradient(180deg, #ffffff, #f5fffa);
+      transform: translateY(-8px);
+      box-shadow: 0 24px 64px rgba(18,166,115,.20);
+    }
+    .package.featured:hover { transform: translateY(-12px); }
+    .badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--green-600);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .05em;
+    }
+    .package-kicker { color: var(--blue-700); font-size: 12px; font-weight: 900; letter-spacing: .08em; }
+    .package h3 { margin: 8px 0 2px; font-size: 24px; }
+    .package-sub { color: var(--muted); font-size: 13px; min-height: 42px; }
+    .price { margin: 18px 0 2px; font-size: 34px; font-weight: 900; color: var(--blue-900); letter-spacing: -.03em; }
+    .price-note { color: var(--muted); font-size: 12px; }
+    .package-highlight {
+      margin: 18px 0;
+      padding: 12px 13px;
+      border-radius: 13px;
+      background: var(--blue-50);
+      color: var(--blue-800);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .package.featured .package-highlight { background: var(--green-100); color: var(--green-700); }
+    .package ul { list-style: none; padding: 0; margin: 0 0 22px; }
+    .package li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      padding: 8px 0;
+      border-bottom: 1px dashed #edf2f8;
+      font-size: 14px;
+    }
+    .package li:last-child { border-bottom: 0; }
+    .package .btn { margin-top: auto; width: 100%; }
+
+    .comparison-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow-sm);
+      background: #fff;
+    }
+    .comparison {
+      width: 100%;
+      min-width: 920px;
+      border-collapse: collapse;
+    }
+    .comparison th,
+    .comparison td {
+      padding: 16px 18px;
+      text-align: center;
+      border-bottom: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .comparison th:first-child,
+    .comparison td:first-child { text-align: left; font-weight: 800; }
+    .comparison th { background: var(--blue-50); color: var(--blue-900); }
+    .comparison th:nth-child(3) { background: var(--green-100); color: var(--green-700); }
+    .comparison tr:last-child td { border-bottom: 0; }
+    .comparison th:last-child,
+    .comparison td:last-child { border-right: 0; }
+    .yes { color: var(--green-700); font-weight: 900; }
+    .no { color: #9aa8b9; }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+    .result-card {
+      padding: 30px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+    .result-card.blue { background: linear-gradient(145deg, var(--blue-950), var(--blue-700)); color: #fff; border: 0; }
+    .result-card h3 { margin: 0 0 14px; font-size: 27px; }
+    .result-card p { margin: 0; color: var(--muted); }
+    .result-card.blue p { color: rgba(255,255,255,.85); }
+    .result-list { list-style: none; padding: 0; margin: 20px 0 0; }
+    .result-list li { display: flex; gap: 10px; margin: 12px 0; }
+
+    .faq {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 18px 20px;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--blue-700); font-size: 24px; }
+    details[open] summary::after { content: "–"; }
+    details p { margin: 0; padding: 0 20px 20px; color: var(--muted); }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      padding: 46px;
+      background: linear-gradient(135deg, var(--blue-950), var(--blue-700) 58%, var(--green-700));
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+    }
+    .cta-box::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      right: -80px;
+      top: -100px;
+      background: rgba(255,255,255,.1);
+    }
+    .cta-box h2 { margin: 0 0 10px; font-size: clamp(30px, 4vw, 46px); line-height: 1.15; }
+    .cta-box p { margin: 0; color: rgba(255,255,255,.85); max-width: 720px; }
+    .cta-actions { display: flex; flex-direction: column; gap: 10px; min-width: 220px; }
+    .cta-actions .btn-outline { color: #fff; background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.35); }
+
+    footer {
+      padding: 34px 0 92px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 30px;
+      align-items: start;
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; justify-content: flex-end; }
+
+    .floating-cta {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .float-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+      font-size: 21px;
+      font-weight: 900;
+    }
+    .float-btn.call { background: var(--blue-700); }
+    .float-btn.chat { background: var(--green-600); }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 1040px) {
+      .menu { display: none; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .packages { grid-template-columns: repeat(2, 1fr); }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .process { grid-template-columns: repeat(2, 1fr); gap: 30px 18px; }
+      .process::before { display: none; }
+      .cta-box { grid-template-columns: 1fr; }
+      .cta-actions { flex-direction: row; flex-wrap: wrap; }
+    }
+
+    @media (max-width: 720px) {
+      .section { padding: 64px 0; }
+      .topbar-inner { min-height: 44px; padding: 7px 0; }
+      .nav { min-height: 64px; }
+      .brand-text span { display: none; }
+      .nav .btn { display: none; }
+      .hero { padding-top: 46px; }
+      .hero-copy h1 { font-size: 43px; }
+      .hero-points { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .mini-grid { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .features-grid,
+      .packages,
+      .packages.ground,
+      .result-grid,
+      .footer-grid { grid-template-columns: 1fr; }
+      .package.featured { transform: none; }
+      .package.featured:hover { transform: translateY(-5px); }
+      .process { grid-template-columns: 1fr; }
+      .cta-box { padding: 30px 22px; }
+      .cta-actions { flex-direction: column; }
+      .footer-links { justify-content: flex-start; }
+      .floating-cta { right: 12px; bottom: 12px; }
+      .float-btn { width: 48px; height: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <strong>Coaching phỏng vấn hàng không 1:1</strong>
+      <span>•</span>
+      <span>Online & Offline tại TP.HCM</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="ORI TOEIC">
+        <div class="brand-mark">ORI</div>
+        <div class="brand-text">
+          <strong>ORI TOEIC</strong>
+          <span>Luyện thi hàng không từ 2016</span>
+        </div>
+      </a>
+      <nav class="menu" aria-label="Điều hướng chính">
+        <a href="#uu-diem">Ưu điểm</a>
+        <a href="#quy-trinh">Quy trình</a>
+        <a href="#goi-hoc">Gói học</a>
+        <a href="#so-sanh">So sánh</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-green" href="tel:0906303373">Gọi tư vấn</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Coaching 1:1 • Cá nhân hóa theo từng hãng</span>
+          <h1>Từ hồ sơ đến phòng <span>Final Interview</span></h1>
+          <p>
+            ORI đồng hành cùng bạn hoàn thiện CV, xây dựng script cá nhân, luyện giao tiếp phản xạ,
+            xử lý câu hỏi bất ngờ và Mock Interview sát với phòng thi thực tế.
+          </p>
+
+          <div class="hero-points">
+            <div class="hero-point"><span class="icon-check">✓</span><span>Thiết kế và chỉnh sửa CV ứng tuyển hàng không</span></div>
+            <div class="hero-point"><span class="icon-check">✓</span><span>Soạn, sửa và cá nhân hóa script phỏng vấn</span></div>
+            <div class="hero-point"><span class="icon-check">✓</span><span>Ghi chú bài giảng và theo dõi tiến độ mỗi buổi</span></div>
+            <div class="hero-point"><span class="icon-check">✓</span><span>Từ Silver: giao tiếp phản xạ + bộ câu hỏi thường gặp</span></div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#goi-hoc">Xem gói học phù hợp</a>
+            <a class="btn btn-outline" href="https://zalo.me/0906303373" target="_blank" rel="noopener">Nhắn Zalo tư vấn</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Minh họa lộ trình học">
+          <div class="mock-screen">
+            <small>ORI INTERVIEW COACHING</small>
+            <h3>Không học thuộc.<br>Học cách trả lời thuyết phục.</h3>
+            <p>Từng câu trả lời được xây dựng từ CV, kinh nghiệm và phong cách cá nhân của chính bạn.</p>
+          </div>
+          <div class="mini-grid">
+            <div class="mini-card"><strong>1:1</strong><span>Coaching cá nhân</span></div>
+            <div class="mini-card"><strong>CV</strong><span>Thiết kế chuyên nghiệp</span></div>
+            <div class="mini-card"><strong>Mock</strong><span>Sát format tuyển dụng</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>2016+</strong><span>Kinh nghiệm luyện thi hàng không</span></div>
+        <div class="trust-item"><strong>1:1</strong><span>Lộ trình theo từng học viên</span></div>
+        <div class="trust-item"><strong>Online</strong><span>Học linh hoạt toàn quốc</span></div>
+        <div class="trust-item"><strong>Offline</strong><span>135 Bạch Đằng, Tân Bình</span></div>
+      </div>
+    </section>
+
+    <section id="uu-diem" class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Giá trị khác biệt</span>
+          <h2>Học đúng thứ nhà tuyển dụng cần thấy</h2>
+          <p>Không dạy theo mẫu chung. Mỗi nội dung đều được điều chỉnh theo hãng, vị trí, hồ sơ và năng lực hiện tại của bạn.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">01</div>
+            <h3>Coaching 1:1 cá nhân hóa</h3>
+            <p>Khai thác điểm mạnh thật, điều chỉnh cách trả lời theo từng hãng và xây dựng hình ảnh ứng viên tự nhiên, chuyên nghiệp.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">CV</div>
+            <h3>Thiết kế CV hàng không</h3>
+            <p>Tối ưu mục tiêu nghề nghiệp, kinh nghiệm, kỹ năng dịch vụ và bố cục hồ sơ để tăng khả năng được chú ý.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">✎</div>
+            <h3>Soạn và sửa script</h3>
+            <p>Coach chỉnh từng câu tiếng Việt và tiếng Anh, giúp câu trả lời đúng trọng tâm, tự nhiên và không mang cảm giác học thuộc.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">↗</div>
+            <h3>Giao tiếp phản xạ</h3>
+            <p>Từ gói Silver, học viên luyện phản xạ trực tiếp trên bộ câu hỏi thường gặp và các tình huống dịch vụ hàng không.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>Ghi chú sau mỗi buổi</h3>
+            <p>Mỗi buổi đều có nội dung đã học, lỗi cần sửa, bài tập và mục tiêu tiếp theo để học viên theo dõi tiến độ rõ ràng.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">★</div>
+            <h3>Mock Interview sát thực tế</h3>
+            <p>Mô phỏng phỏng vấn tiếng Việt, tiếng Anh, câu hỏi CV, tình huống, follow-up và hội đồng theo hãng mục tiêu.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="quy-trinh" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Quy trình học</span>
+          <h2>4 giai đoạn để sẵn sàng bước vào phòng thi</h2>
+          <p>Mỗi bước đều có mục tiêu rõ ràng, tài liệu cụ thể và phản hồi trực tiếp từ Coach.</p>
+        </div>
+
+        <div class="process">
+          <div class="process-step">
+            <div class="step-no">01</div>
+            <h3>Đánh giá đầu vào</h3>
+            <p>Phân tích CV, tiếng Anh, phản xạ, phong thái và hãng mục tiêu.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-no">02</div>
+            <h3>Hoàn thiện hồ sơ</h3>
+            <p>Thiết kế CV và khai thác câu chuyện cá nhân để tạo nội dung thuyết phục.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-no">03</div>
+            <h3>Luyện script & phản xạ</h3>
+            <p>Soạn, sửa, luyện nói, phát âm, follow-up và bộ câu hỏi thường gặp.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-no">04</div>
+            <h3>Mock & hoàn thiện</h3>
+            <p>Mô phỏng phòng thi, sửa lỗi và rà soát chiến lược trước ngày tuyển dụng.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="goi-hoc" class="section section-green">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Gói coaching</span>
+          <h2>Chọn đúng lộ trình, tiết kiệm thời gian ôn luyện</h2>
+          <p>Gói Silver được đề xuất cho phần lớn ứng viên lần đầu thi vì đã bao gồm giao tiếp phản xạ và bộ câu hỏi thường gặp.</p>
+        </div>
+
+        <div style="text-align:center">
+          <div class="switcher" role="tablist" aria-label="Chọn nhóm khóa học">
+            <button class="active" data-target="cabin" role="tab">Tiếp viên hàng không</button>
+            <button data-target="ground" role="tab">Nhân viên mặt đất</button>
+          </div>
+        </div>
+
+        <div id="cabin" class="package-panel">
+          <div class="packages">
+            <article class="package">
+              <span class="package-kicker">BASIC</span>
+              <h3>Ready to Fly</h3>
+              <div class="package-sub">Ôn cấp tốc cho 01 hãng nội địa</div>
+              <div class="price">3.000.000đ</div>
+              <div class="price-note">06 buổi Coaching 1:1</div>
+              <div class="package-highlight">Phù hợp khi đã có nền tảng và sắp thi</div>
+              <ul>
+                <li><span class="icon-check">✓</span><span>Đánh giá năng lực và lộ trình 01 hãng</span></li>
+                <li><span class="icon-check">✓</span><span>Thiết kế, chỉnh sửa 01 CV</span></li>
+                <li><span class="icon-check">✓</span><span>Soạn và sửa script trọng tâm</span></li>
+                <li><span class="icon-check">✓</span><span>Luyện câu hỏi nền tảng và tình huống cơ bản</span></li>
+                <li><span class="icon-check">✓</span><span>Ghi chú sau mỗi buổi học</span></li>
+                <li><span class="icon-check">✓</span><span>Mock Interview trong chương trình</span></li>
+              </ul>
+              <a class="btn btn-outline" href="https://zalo.me/0906303373" target="_blank" rel="noopener">Tư vấn gói Basic</a>
+            </article>
+
+            <article class="package featured">
+              <div class="badge">ĐƯỢC CHỌN NHIỀU NHẤT</div>
+              <span class="package-kicker">SILVER</span>
+              <h3>Confidence Booster</h3>
+              <div class="package-sub">Hoàn thiện phỏng vấn và tăng phản xạ tiếng Anh</div>
+              <div class="price">5.000.000đ</div>
+              <div class="price-note">12 buổi Coaching 1:1</div>
+              <div class="package-highlight">Tặng 01 tháng Giao tiếp phản xạ</div>
+              <ul>
+                <li><span class="icon-check">✓</span><span>Áp dụng cho 2–3 hãng nội địa</span></li>
+                <li><span class="icon-check">✓</span><span>Tối đa 02 phiên bản CV</span></li>
+                <li><span class="icon-check">✓</span><span>Soạn và sửa script chi tiết theo từng hãng</span></li>
+                <li><span class="icon-check">✓</span><span>Bộ câu hỏi thường gặp, CV và câu hỏi bất ngờ</span></li>
+                <li><span class="icon-check">✓</span><span>01 tháng giao tiếp phản xạ hàng không</span></li>
+                <li><span class="icon-check">✓</span><span>Mock Interview và điều chỉnh sau mỗi lần mock</span></li>
+              </ul>
+              <a class="btn btn-green" href="https://zalo.me/0906303373" target="_blank" rel="noopener">Chọn gói Silver</a>
+            </article>
+
+            <article class="package">
+              <span class="package-kicker">PREMIUM</span>
+              <h3>Global Reach</h3>
+              <div class="package-sub">Luyện hãng nội địa và quốc tế</div>
+              <div class="price">8.000.000đ</div>
+              <div class="price-note">22 buổi Coaching 1:1</div>
+              <div class="package-highlight">Tặng 02 tháng Giao tiếp phản xạ</div>
+              <ul>
+                <li><span class="icon-check">✓</span><span>Lộ trình cho hãng nội địa và quốc tế</span></li>
+                <li><span class="icon-check">✓</span><span>Tối đa 02 CV chuyên biệt</span></li>
+                <li><span class="icon-check">✓</span><span>Ngân hàng câu chuyện cá nhân và script chuyên sâu</span></li>
+                <li><span class="icon-check">✓</span><span>Luyện English Test và Math Test</span></li>
+                <li><span class="icon-check">✓</span><span>02 tháng giao tiếp phản xạ</span></li>
+                <li><span class="icon-check">✓</span><span>Mock full format nhiều vòng</span></li>
+              </ul>
+              <a class="btn btn-primary" href="https://zalo.me/0906303373" target="_blank" rel="noopener">Tư vấn gói Premium</a>
+            </article>
+
+            <article class="package">
+              <span class="package-kicker">ELITE</span>
+              <h3>Career Partner</h3>
+              <div class="package-sub">Đồng hành chiến lược qua nhiều đợt tuyển dụng</div>
+              <div class="price">10.000.000đ</div>
+              <div class="price-note">Theo điều kiện chương trình</div>
+              <div class="package-highlight">Coaching 1:1 chuyên sâu theo lộ trình</div>
+              <ul>
+                <li><span class="icon-check">✓</span><span>Hỗ trợ nhiều hãng nội địa và quốc tế</span></li>
+                <li><span class="icon-check">✓</span><span>Tối đa 03 CV chuyên biệt</span></li>
+                <li><span class="icon-check">✓</span><span>Cập nhật, sửa script theo tiến độ ứng tuyển</span></li>
+                <li><span class="icon-check">✓</span><span>Phân tích và điều chỉnh sau mỗi đợt thi</span></li>
+                <li><span class="icon-check">✓</span><span>02 tháng giao tiếp phản xạ</span></li>
+                <li><span class="icon-check">✓</span><span>Ưu tiên rà soát trước ngày thi</span></li>
+              </ul>
+              <a class="btn btn-primary" href="https://zalo.me/0906303373" target="_blank" rel="noopener">Tư vấn gói Elite</a>
+            </article>
+          </div>
+        </div>
+
+        <div id="ground" class="package-panel hidden">
+          <div class="packages ground">
+            <article class="package">
+              <span class="package-kicker">GROUND BASIC</span>
+              <h3>Ready for the Counter</h3>
+              <div class="package-sub">Ôn đúng trọng tâm cho ứng viên sắp thi</div>
+              <div class="price">3.000.000đ</div>
+              <div class="price-note">06 buổi Coaching 1:1</div>
+              <div class="package-highlight">CV + script + tình huống dịch vụ sân bay</div>
+              <ul>
+                <li><span class="icon-check">✓</span><span>Đánh giá hồ sơ và vị trí mục tiêu</span></li>
+                <li><span class="icon-check">✓</span><span>Thiết kế, chỉnh sửa 01 CV</span></li>
+                <li><span class="icon-check">✓</span><span>Bộ câu hỏi phỏng vấn mặt đất thường gặp</span></li>
+                <li><span class="icon-check">✓</span><span>Soạn và sửa script Việt – Anh</span></li>
+                <li><span class="icon-check">✓</span><span>Luyện customer service, teamwork và xử lý tình huống</span></li>
+                <li><span class="icon-check">✓</span><span>Mock Interview trong chương trình</span></li>
+              </ul>
+              <a class="btn btn-outline" href="https://zalo.me/0906303373" target="_blank" rel="noopener">Tư vấn Ground Basic</a>
+            </article>
+
+            <article class="package featured">
+              <div class="badge">ĐỒNG HÀNH CHUYÊN SÂU</div>
+              <span class="package-kicker">GROUND GUARANTEE</span>
+              <h3>Hired & Ready</h3>
+              <div class="package-sub">Lộ trình nhiều đơn vị và nhiều vị trí mặt đất</div>
+              <div class="price">5.000.000đ</div>
+              <div class="price-note">Theo điều kiện chương trình</div>
+              <div class="package-highlight">Tối ưu CV theo JD và luyện nhiều đợt tuyển dụng</div>
+              <ul>
+                <li><span class="icon-check">✓</span><span>Hỗ trợ VIAGS, HGS, SASCO và vị trí tương đương</span></li>
+                <li><span class="icon-check">✓</span><span>Điều chỉnh CV theo từng JD</span></li>
+                <li><span class="icon-check">✓</span><span>Soạn, sửa script theo từng đơn vị</span></li>
+                <li><span class="icon-check">✓</span><span>Luyện delay, hành lý, khiếu nại và phối hợp bộ phận</span></li>
+                <li><span class="icon-check">✓</span><span>Mock theo từng vị trí</span></li>
+                <li><span class="icon-check">✓</span><span>Điều chỉnh chiến lược sau từng đợt ứng tuyển</span></li>
+              </ul>
+              <a class="btn btn-green" href="https://zalo.me/0906303373" target="_blank" rel="noopener">Chọn Ground Guarantee</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="so-sanh" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">So sánh trực quan</span>
+          <h2>Quyền lợi tăng rõ theo từng cấp độ</h2>
+          <p>Silver là điểm cân bằng tốt giữa chi phí, số buổi, phản xạ tiếng Anh và mức độ cá nhân hóa.</p>
+        </div>
+
+        <div class="comparison-wrap">
+          <table class="comparison">
+            <thead>
+              <tr>
+                <th>Quyền lợi</th>
+                <th>Basic</th>
+                <th>Silver</th>
+                <th>Premium</th>
+                <th>Elite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Học phí</td><td>3 triệu</td><td><strong>5 triệu</strong></td><td>8 triệu</td><td>10 triệu</td></tr>
+              <tr><td>Coaching 1:1</td><td>06 buổi</td><td><strong>12 buổi</strong></td><td>22 buổi</td><td>Theo lộ trình</td></tr>
+              <tr><td>Hãng mục tiêu</td><td>01 hãng nội địa</td><td><strong>2–3 hãng nội địa</strong></td><td>Nội địa & quốc tế</td><td>Nhiều hãng</td></tr>
+              <tr><td>Thiết kế CV</td><td>01 bản</td><td><strong>Tối đa 02 bản</strong></td><td>Tối đa 02 bản chuyên biệt</td><td>Tối đa 03 bản</td></tr>
+              <tr><td>Soạn & sửa script</td><td class="yes">Có</td><td class="yes">Chi tiết</td><td class="yes">Chuyên sâu</td><td class="yes">Theo lộ trình</td></tr>
+              <tr><td>Ghi chú sau mỗi buổi</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Bộ câu hỏi thường gặp</td><td>Cơ bản</td><td><strong>Đầy đủ</strong></td><td>Nội địa & quốc tế</td><td>Cập nhật theo hãng</td></tr>
+              <tr><td>Giao tiếp phản xạ</td><td class="no">—</td><td><strong>01 tháng</strong></td><td>02 tháng</td><td>02 tháng</td></tr>
+              <tr><td>English / Math Test</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+              <tr><td>Mock Interview</td><td class="yes">✓</td><td>Theo hãng</td><td>Full format</td><td>Nhiều giai đoạn</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container result-grid">
+        <div class="result-card blue">
+          <h3>Bạn nhận được gì sau khóa học?</h3>
+          <p>Một hệ thống chuẩn bị hoàn chỉnh thay vì những câu trả lời rời rạc.</p>
+          <ul class="result-list">
+            <li><span class="icon-check">✓</span><span>CV chuyên nghiệp và đúng định hướng hàng không</span></li>
+            <li><span class="icon-check">✓</span><span>Bộ script cá nhân hóa từ trải nghiệm thật</span></li>
+            <li><span class="icon-check">✓</span><span>Phản xạ tốt hơn trước câu hỏi bất ngờ</span></li>
+            <li><span class="icon-check">✓</span><span>Phong thái và ngôn ngữ cơ thể phù hợp</span></li>
+          </ul>
+        </div>
+        <div class="result-card">
+          <h3>Gói nào phù hợp nhất?</h3>
+          <p><strong>Basic:</strong> sắp thi, đã có nền tảng, tập trung một hãng.</p>
+          <p style="margin-top:12px"><strong>Silver:</strong> cần lộ trình đầy đủ, phản xạ tiếng Anh và bộ câu hỏi thường gặp.</p>
+          <p style="margin-top:12px"><strong>Premium:</strong> muốn thi nội địa lẫn quốc tế, cần English/Math Test.</p>
+          <p style="margin-top:12px"><strong>Elite:</strong> theo đuổi nghiêm túc và cần đồng hành nhiều đợt tuyển dụng.</p>
+          <a class="btn btn-green" style="margin-top:22px" href="https://zalo.me/0906303373" target="_blank" rel="noopener">Nhận tư vấn lộ trình</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Câu hỏi thường gặp</span>
+          <h2>Giải đáp trước khi đăng ký</h2>
+        </div>
+
+        <div class="faq">
+          <details open>
+            <summary>Tiếng Anh chưa tốt có học được không?</summary>
+            <p>Có. Coach sẽ đánh giá trình độ đầu vào và điều chỉnh tốc độ học. Từ gói Silver, học viên được bổ sung giao tiếp phản xạ để cải thiện khả năng nghe – nói và xử lý câu hỏi bằng tiếng Anh.</p>
+          </details>
+          <details>
+            <summary>CV có được thiết kế lại hoàn toàn không?</summary>
+            <p>Có. ORI hỗ trợ sắp xếp kinh nghiệm, viết mục tiêu nghề nghiệp, làm nổi bật kỹ năng phù hợp và trình trình bày CV theo hướng chuyên nghiệp, dễ đọc.</p>
+          </details>
+          <details>
+            <summary>Script có phải câu trả lời mẫu giống nhau không?</summary>
+            <p>Không. Nội dung được xây dựng từ CV, kinh nghiệm và câu chuyện thật của từng học viên. Coach sẽ sửa để câu trả lời tự nhiên, đúng trọng tâm và phù hợp với hãng mục tiêu.</p>
+          </details>
+          <details>
+            <summary>Có được học online không?</summary>
+            <p>Có. Học viên có thể học qua Zoom hoặc học trực tiếp tại 135 Bạch Đằng, Phường Tân Sơn Hòa, Quận Tân Bình, TP.HCM.</p>
+          </details>
+          <details>
+            <summary>Gói “theo lộ trình” được hiểu như thế nào?</summary>
+            <p>Quyền lợi và thời gian áp dụng được thực hiện theo điều kiện cụ thể của từng chương trình. Học viên sẽ được tư vấn rõ trước khi đăng ký để đảm bảo minh bạch.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>Đừng chỉ học câu trả lời.<br>Hãy trở thành ứng viên phù hợp.</h2>
+            <p>Nhắn ORI để được đánh giá nhanh hồ sơ, trình độ tiếng Anh và tư vấn gói học phù hợp với hãng bạn sắp ứng tuyển.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-green" href="https://zalo.me/0906303373" target="_blank" rel="noopener">Nhắn Zalo ngay</a>
+            <a class="btn btn-outline" href="tel:0906303373">0906 303 373</a>
+            <a class="btn btn-outline" href="tel:0778845689">0778 845 689</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong style="color:var(--ink)">ORI TOEIC – Coaching phỏng vấn hàng không 1:1</strong><br>
+        135 Bạch Đằng, P. Tân Sơn Hòa, Q. Tân Bình, TP.HCM<br>
+        Hotline: 0906 303 373 • 0778 845 689
+      </div>
+      <div class="footer-links">
+        <a href="#uu-diem">Ưu điểm</a>
+        <a href="#quy-trinh">Quy trình</a>
+        <a href="#goi-hoc">Gói học</a>
+        <a href="#so-sanh">So sánh</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-cta" aria-label="Liên hệ nhanh">
+    <a class="float-btn chat" href="https://zalo.me/0906303373" target="_blank" rel="noopener" aria-label="Nhắn Zalo">Z</a>
+    <a class="float-btn call" href="tel:0906303373" aria-label="Gọi điện">☎</a>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.switcher button');
+    const panels = document.querySelectorAll('.package-panel');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((item) => item.classList.remove('active'));
+        panels.forEach((panel) => panel.classList.add('hidden'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).classList.remove('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
